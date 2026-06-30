@@ -396,8 +396,13 @@ function showMenu(menu){
     document.getElementById('luas').style.display='none';
     document.getElementById('volume').style.display='none';
     document.getElementById('semen').style.display='none';
+    
+    let x = document.getElementById(menu);
 
-    document.getElementById(menu).style.display='block';
+    x.style.display='block';
+    x.style.animation='none';
+    x.offsetHeight;
+    x.style.animation='fadeUp .5s ease';
 
     window.scrollTo({
         top: document.getElementById(menu).offsetTop,
