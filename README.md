@@ -4,17 +4,16 @@ CivilCalc adalah aplikasi web sederhana untuk membantu mahasiswa Teknik Sipil me
 
 ## Fitur
 
-- Menghitung luas bangunan
-- Menghitung volume beton
-- Mengestimasi kebutuhan semen
-- Antarmuka sederhana dan mudah digunakan
-- Dapat diakses melalui browser tanpa instalasi
+* Menghitung luas bangunan
+* Menghitung volume beton
+* Mengestimasi kebutuhan semen
+* Tampilan responsif dan mudah digunakan
 
 ## Teknologi yang Digunakan
 
-- HTML5
-- CSS3
-- JavaScript
+* HTML5
+* CSS3
+* JavaScript
 
 ## Cara Menjalankan
 
@@ -30,30 +29,31 @@ git clone https://github.com/fauzanabdullah/civilcalc.git
 cd civilcalc
 ```
 
-3. Buka file `index.html` menggunakan browser.
+3. Buka file `index.html` menggunakan browser (Google Chrome, Mozilla Firefox, Microsoft Edge, atau browser lainnya).
 
-## Cara Menggunakan
+Alternatif lain, jika menggunakan Visual Studio Code, buka file `index.html` menggunakan ekstensi **Live Server**.
 
-### Hitung Luas
+Aplikasi juga dapat diakses secara langsung melalui GitHub Pages:
 
-Masukkan:
-- Panjang (m)
-- Lebar (m)
+```text
+https://fauzanabdullah.github.io/civilcalc/
+```
 
-Kemudian klik tombol **Hitung Luas**.
+## Perhitungan
 
-### Hitung Volume Beton
+### Luas Bangunan
 
-Masukkan:
-- Panjang (m)
-- Lebar (m)
-- Tinggi (m)
+```text
+Luas = Panjang × Lebar
+```
 
-Kemudian klik tombol **Hitung Volume**.
+### Volume Beton
 
-### Hitung Kebutuhan Semen
+```text
+Volume = Panjang × Lebar × Tinggi
+```
 
-Aplikasi menggunakan asumsi:
+### Kebutuhan Semen
 
 ```text
 1 m³ beton ≈ 8 sak semen
