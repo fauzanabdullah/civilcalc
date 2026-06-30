@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CivilCalc - Kalkulator Teknik Sipil</title>
-
+    <link rel="icon" type="image/png" href="assets/logo.png">
+<div id="loading"></div>
     <style>
         *{
             margin:0;
@@ -236,6 +237,35 @@
     gap:10px;
     justify-content:center;
     flex-wrap:wrap;
+}
+        @keyframes pop{
+    0%{
+        opacity:0;
+        transform:scale(0.7);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.hasil{
+    animation:pop .4s ease;
+}
+        #loading{
+    width:40px;
+    height:40px;
+    border:5px solid #ddd;
+    border-top:5px solid #FDBA31;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
 }
     </style>
 </head>
