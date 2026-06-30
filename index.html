@@ -362,7 +362,26 @@ function showMenu(menu){
     });
 }
 function closeMenu(menu){
-    document.getElementById(menu).style.display = "none";
+
+    document.getElementById(menu).style.display='none';
+
+    if(menu==='luas'){
+        document.getElementById('panjang').value='';
+        document.getElementById('lebar').value='';
+        document.getElementById('hasilLuas').innerHTML='';
+    }
+
+    if(menu==='volume'){
+        document.getElementById('p').value='';
+        document.getElementById('l').value='';
+        document.getElementById('t').value='';
+        document.getElementById('hasilVolume').innerHTML='';
+    }
+
+    if(menu==='semen'){
+        document.getElementById('volumeBeton').value='';
+        document.getElementById('hasilSemen').innerHTML='';
+    }
 }
 function hitungLuas(){
 
