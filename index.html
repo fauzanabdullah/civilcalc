@@ -338,7 +338,9 @@ function showMenu(menu){
         behavior:'smooth'
     });
 }
-
+function closeMenu(menu){
+    document.getElementById(menu).style.display = "none";
+}
 function hitungLuas(){
     let p=parseFloat(document.getElementById('panjang').value)||0;
     let l=parseFloat(document.getElementById('lebar').value)||0;
