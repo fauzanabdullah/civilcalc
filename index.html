@@ -203,6 +203,15 @@
     font-size:20px;
     text-align:center;
 }
+        .btn-close{
+    background:#ef4444;
+    color:white;
+    margin-left:10px;
+}
+
+.btn-close:hover{
+    transform:scale(1.05);
+}
     </style>
 </head>
 <body>
@@ -283,7 +292,8 @@
         <input type="number" id="lebar" placeholder="Lebar (m)">
         <br><br>
         <button class="btn" onclick="hitungLuas()">Hitung</button>
-        <button class="btn" onclick="closeMenu('luas')">
+        <button class="btn btn-close"
+        onclick="closeMenu('luas')">
         ❌ Tutup
         </button>
         <div class="hasil" id="hasilLuas"></div>
@@ -299,7 +309,8 @@
         <input type="number" id="t" placeholder="Tinggi">
         <br><br>
         <button class="btn" onclick="hitungVolume()">Hitung</button>
-        <button class="btn" onclick="closeMenu('volume')">
+       <button class="btn btn-close"
+        onclick="closeMenu('volume')">
         ❌ Tutup
         </button>
         <div class="hasil" id="hasilVolume"></div>
@@ -312,7 +323,8 @@
         <input type="number" id="volumeBeton" placeholder="Volume (m³)">
         <br><br>
         <button class="btn" onclick="hitungSemen()">Hitung</button>
-        <button class="btn" onclick="closeMenu('semen')">
+        <button class="btn btn-close"
+        onclick="closeMenu('semen')">
         ❌ Tutup
         </button>
         <div class="hasil" id="hasilSemen"></div>
