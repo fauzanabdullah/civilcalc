@@ -359,27 +359,57 @@ function closeMenu(menu){
     document.getElementById(menu).style.display = "none";
 }
 function hitungLuas(){
-    let p=parseFloat(document.getElementById('panjang').value)||0;
-    let l=parseFloat(document.getElementById('lebar').value)||0;
 
-    document.getElementById('hasilLuas').innerHTML=
-        "Luas = "+(p*l).toFixed(2)+" m²";
+    let p = document.getElementById('panjang').value;
+    let l = document.getElementById('lebar').value;
+
+    if(p==='' || l===''){
+        alert('Silakan isi panjang dan lebar terlebih dahulu!');
+        return;
+    }
+
+    let luas = parseFloat(p) * parseFloat(l);
+
+    document.getElementById('hasilLuas').innerHTML =
+        'Luas = ' + luas.toFixed(2) + ' m²';
 }
 
 function hitungVolume(){
-    let p=parseFloat(document.getElementById('p').value)||0;
-    let l=parseFloat(document.getElementById('l').value)||0;
-    let t=parseFloat(document.getElementById('t').value)||0;
 
-    document.getElementById('hasilVolume').innerHTML=
-        "Volume = "+(p*l*t).toFixed(2)+" m³";
+    let p = document.getElementById('p').value;
+    let l = document.getElementById('l').value;
+    let t = document.getElementById('t').value;
+
+    if(p==='' || l==='' || t===''){
+        alert('Silakan isi seluruh dimensi beton!');
+        return;
+    }
+
+    let volume =
+        parseFloat(p) *
+        parseFloat(l) *
+        parseFloat(t);
+
+    document.getElementById('hasilVolume').innerHTML =
+        'Volume = ' + volume.toFixed(2) + ' m³';
 }
 
 function hitungSemen(){
-    let v=parseFloat(document.getElementById('volumeBeton').value)||0;
 
-    document.getElementById('hasilSemen').innerHTML=
-        "Kebutuhan = "+(v*8).toFixed(0)+" sak semen";
+    let v =
+        document.getElementById('volumeBeton').value;
+
+    if(v===''){
+        alert('Silakan masukkan volume beton!');
+        return;
+    }
+
+    let sak = parseFloat(v) * 8;
+
+    document.getElementById('hasilSemen').innerHTML =
+        'Kebutuhan semen = ' +
+        sak.toFixed(0) +
+        ' sak';
 }
 </script> </body>
 </html>
