@@ -1,3 +1,6 @@
+<p align="center">
+
+<img src="assets/logo.png" alt="CivilCalc Logo" width="120"> </p>
 # CivilCalc
 
 CivilCalc adalah aplikasi web sederhana untuk membantu mahasiswa Teknik Sipil melakukan perhitungan dasar konstruksi dengan cepat dan mudah.
