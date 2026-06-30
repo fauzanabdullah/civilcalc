@@ -78,7 +78,6 @@ Project ini dibuat sebagai media pembelajaran pemrograman web dan penerapannya d
 
 **Fauzan Abdullah**
 
-Teknik Sipil
 
 ## Lisensi
 
