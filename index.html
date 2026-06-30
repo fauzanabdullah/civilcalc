@@ -275,7 +275,7 @@
     </div>
 <div class="container">
 
-    <div id="luas" class="card" style="display:none;">
+    <div id="luas" class="calculator">
         <h2>📐 Luas Bangunan</h2>
         <br>
         <input type="number" id="panjang" placeholder="Panjang (m)">
@@ -283,10 +283,10 @@
         <input type="number" id="lebar" placeholder="Lebar (m)">
         <br><br>
         <button class="btn" onclick="hitungLuas()">Hitung</button>
-        <h3 id="hasilLuas"></h3>
+        <div class="hasil" id="hasilLuas"></div>
     </div>
 
-    <div id="volume" class="card" style="display:none;">
+    <div id="volume" class="calculator">
         <h2>🏗️ Volume Beton</h2>
         <br>
         <input type="number" id="p" placeholder="Panjang">
@@ -296,17 +296,17 @@
         <input type="number" id="t" placeholder="Tinggi">
         <br><br>
         <button class="btn" onclick="hitungVolume()">Hitung</button>
-        <h3 id="hasilVolume"></h3>
+        <div class="hasil" id="hasilVolume"></div>
     </div>
 
-    <div id="semen" class="card" style="display:none;">
+    <div id="semen" class="calculator">
         <h2>🧱 Kebutuhan Semen</h2>
         <p><b>1 m³ = 8 sak semen</b></p>
         <br>
         <input type="number" id="volumeBeton" placeholder="Volume (m³)">
         <br><br>
         <button class="btn" onclick="hitungSemen()">Hitung</button>
-        <h3 id="hasilSemen"></h3>
+        <div class="hasil" id="hasilSemen"></div>
     </div>
 
 </div>
