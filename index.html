@@ -203,21 +203,26 @@
                 <div class="icon">📐</div>
                 <h3>Luas Bangunan</h3>
                 <p>Menghitung luas bangunan dan ruangan secara cepat.</p>
-                <button class="btn">Buka</button>
-            </div>
+                <button class="btn" onclick="showMenu('luas')">
+                Buka
+                </button>
 
             <div class="card">
                 <div class="icon">🏗️</div>
                 <h3>Volume Beton</h3>
                 <p>Menghitung volume beton dalam satuan meter kubik.</p>
-                <button class="btn">Buka</button>
+                <button class="btn" onclick="showMenu('volume')">
+                Buka
+                </button>
             </div>
 
             <div class="card">
                 <div class="icon">🧱</div>
                 <h3>Kebutuhan Semen</h3>
                 <p>Menghitung estimasi kebutuhan semen beton.</p>
-                <button class="btn">Buka</button>
+                <button class="btn" onclick="showMenu('semen')">
+                Buka
+                </button>
             </div>
 
         </div>
@@ -233,12 +238,86 @@
             yang digunakan.
         </p>
     </div>
+<div class="container">
 
+    <div id="luas" class="card" style="display:none;">
+        <h2>📐 Luas Bangunan</h2>
+        <br>
+        <input type="number" id="panjang" placeholder="Panjang (m)">
+        <br><br>
+        <input type="number" id="lebar" placeholder="Lebar (m)">
+        <br><br>
+        <button class="btn" onclick="hitungLuas()">Hitung</button>
+        <h3 id="hasilLuas"></h3>
+    </div>
+
+    <div id="volume" class="card" style="display:none;">
+        <h2>🏗️ Volume Beton</h2>
+        <br>
+        <input type="number" id="p" placeholder="Panjang">
+        <br><br>
+        <input type="number" id="l" placeholder="Lebar">
+        <br><br>
+        <input type="number" id="t" placeholder="Tinggi">
+        <br><br>
+        <button class="btn" onclick="hitungVolume()">Hitung</button>
+        <h3 id="hasilVolume"></h3>
+    </div>
+
+    <div id="semen" class="card" style="display:none;">
+        <h2>🧱 Kebutuhan Semen</h2>
+        <p><b>1 m³ = 8 sak semen</b></p>
+        <br>
+        <input type="number" id="volumeBeton" placeholder="Volume (m³)">
+        <br><br>
+        <button class="btn" onclick="hitungSemen()">Hitung</button>
+        <h3 id="hasilSemen"></h3>
+    </div>
+
+</div>
     <!-- FOOTER -->
     <footer>
         © 2026 CivilCalc | Developed by Fauzan Abdullah
     </footer>
 
-</body>
+<script>
+function showMenu(menu){
+
+    document.getElementById('luas').style.display='none';
+    document.getElementById('volume').style.display='none';
+    document.getElementById('semen').style.display='none';
+
+    document.getElementById(menu).style.display='block';
+
+    window.scrollTo({
+        top: document.getElementById(menu).offsetTop,
+        behavior:'smooth'
+    });
+}
+
+function hitungLuas(){
+    let p=parseFloat(document.getElementById('panjang').value)||0;
+    let l=parseFloat(document.getElementById('lebar').value)||0;
+
+    document.getElementById('hasilLuas').innerHTML=
+        "Luas = "+(p*l).toFixed(2)+" m²";
+}
+
+function hitungVolume(){
+    let p=parseFloat(document.getElementById('p').value)||0;
+    let l=parseFloat(document.getElementById('l').value)||0;
+    let t=parseFloat(document.getElementById('t').value)||0;
+
+    document.getElementById('hasilVolume').innerHTML=
+        "Volume = "+(p*l*t).toFixed(2)+" m³";
+}
+
+function hitungSemen(){
+    let v=parseFloat(document.getElementById('volumeBeton').value)||0;
+
+    document.getElementById('hasilSemen').innerHTML=
+        "Kebutuhan = "+(v*8).toFixed(0)+" sak semen";
+}
+</script> </body>
 </html>
 ```
