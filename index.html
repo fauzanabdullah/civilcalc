@@ -299,13 +299,19 @@
         <br><br>
         <input type="number" id="lebar"
        min="0" step="0.01"
+        onkeypress="if(event.key==='Enter') hitungLuas()"
        placeholder="Masukkan lebar">    
         <br><br>
-        <button class="btn" onclick="hitungLuas()">Hitung</button>
-        <button class="btn btn-close"
-        onclick="closeMenu('luas')">
+        <div class="btn-group">
+    <button class="btn" onclick="hitungLuas()">
+        Hitung
+    </button>
+
+    <button class="btn btn-close"
+            onclick="closeMenu('luas')">
         Tutup
-        </button>
+    </button>
+</div>
         <div class="hasil" id="hasilLuas"></div>
     </div>
 
@@ -318,12 +324,18 @@
         <input type="number" id="l" min="0" step="0.01">
         <br><br>
         <input type="number" id="t" min="0" step="0.01">
+        onkeypress="if(event.key==='Enter') hitungVolume()"
         <br><br>
-        <button class="btn" onclick="hitungVolume()">Hitung</button>
-       <button class="btn btn-close"
-        onclick="closeMenu('volume')">
+       <div class="btn-group">
+    <button class="btn" onclick="hitungVolume()">
+        Hitung
+    </button>
+
+    <button class="btn btn-close"
+            onclick="closeMenu('volume')">
         Tutup
-        </button>
+    </button>
+</div>
         <div class="hasil" id="hasilVolume"></div>
     </div>
 
@@ -336,13 +348,19 @@
        id="volumeBeton"
        min="0"
        step="0.01"
+       onkeypress="if(event.key==='Enter') hitungSemen()"
        placeholder="Volume (m³)">
         <br><br>
-        <button class="btn" onclick="hitungSemen()">Hitung</button>
-        <button class="btn btn-close"
-        onclick="closeMenu('semen')">
+        <div class="btn-group">
+    <button class="btn" onclick="hitungSemen()">
+        Hitung
+    </button>
+
+    <button class="btn btn-close"
+            onclick="closeMenu('semen')">
         Tutup
-        </button>
+    </button>
+</div>
         <div class="hasil" id="hasilSemen"></div>
     </div>
 
