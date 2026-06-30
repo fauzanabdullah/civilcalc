@@ -1,25 +1,245 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>CivilCalc</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivilCalc - Kalkulator Teknik Sipil</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root{
+            --primary:#FDBA31;
+            --dark:#1f2937;
+            --light:#f8fafc;
+            --card:#ffffff;
+        }
+
+        body{
+            background:linear-gradient(135deg,#fff8e8,#f4f6f9);
+            color:var(--dark);
+            min-height:100vh;
+        }
+
+        /* HEADER */
+        header{
+            background:var(--primary);
+            padding:20px 30px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header-container{
+            max-width:1200px;
+            margin:auto;
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .logo{
+            width:80px;
+            height:80px;
+            object-fit:contain;
+            background:white;
+            padding:8px;
+            border-radius:50%;
+            box-shadow:0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .title h1{
+            font-size:2rem;
+            color:#000;
+        }
+
+        .title p{
+            color:#333;
+            margin-top:5px;
+        }
+
+        /* HERO */
+        .hero{
+            text-align:center;
+            padding:50px 20px;
+        }
+
+        .hero h2{
+            font-size:2.2rem;
+            margin-bottom:15px;
+        }
+
+        .hero p{
+            max-width:700px;
+            margin:auto;
+            color:#555;
+            line-height:1.6;
+        }
+
+        /* CARDS */
+        .container{
+            max-width:1200px;
+            margin:auto;
+            padding:20px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:var(--card);
+            padding:30px;
+            border-radius:18px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.08);
+            transition:0.3s;
+            text-align:center;
+            border-top:6px solid var(--primary);
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .icon{
+            font-size:3rem;
+            margin-bottom:15px;
+        }
+
+        .card h3{
+            margin-bottom:10px;
+        }
+
+        .card p{
+            color:#666;
+            line-height:1.5;
+        }
+
+        .btn{
+            margin-top:20px;
+            background:var(--primary);
+            border:none;
+            padding:12px 25px;
+            border-radius:10px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            transform:scale(1.05);
+        }
+
+        /* INFO */
+        .info{
+            max-width:1000px;
+            margin:40px auto;
+            background:#fff7df;
+            border-left:8px solid var(--primary);
+            padding:20px;
+            border-radius:12px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .info h3{
+            margin-bottom:10px;
+        }
+
+        /* FOOTER */
+        footer{
+            margin-top:50px;
+            background:#1f2937;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        @media(max-width:768px){
+            .header-container{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .hero h2{
+                font-size:1.7rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<h1>CivilCalc</h1>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <img src="assets/logo.png" alt="Logo CivilCalc" class="logo">
 
-<div class="card">
-    <h2>Hitung Luas</h2>
+            <div class="title">
+                <h1>CivilCalc</h1>
+                <p>Kalkulator Teknik Sipil untuk Mahasiswa dan Praktisi</p>
+            </div>
+        </div>
+    </header>
 
-    <input type="number" id="panjang" placeholder="Panjang">
-    <input type="number" id="lebar" placeholder="Lebar">
+    <!-- HERO -->
+    <section class="hero">
+        <h2>🏗️ Selamat Datang di CivilCalc</h2>
+        <p>
+            CivilCalc adalah aplikasi kalkulator teknik sipil sederhana
+            untuk membantu perhitungan luas bangunan, volume beton,
+            dan kebutuhan material konstruksi.
+        </p>
+    </section>
 
-    <button onclick="hitungLuas()">Hitung</button>
+    <!-- MENU -->
+    <div class="container">
+        <div class="cards">
 
-    <p id="hasilLuas"></p>
-</div>
+            <div class="card">
+                <div class="icon">📐</div>
+                <h3>Luas Bangunan</h3>
+                <p>Menghitung luas bangunan dan ruangan secara cepat.</p>
+                <button class="btn">Buka</button>
+            </div>
 
-<script src="script.js"></script>
+            <div class="card">
+                <div class="icon">🏗️</div>
+                <h3>Volume Beton</h3>
+                <p>Menghitung volume beton dalam satuan meter kubik.</p>
+                <button class="btn">Buka</button>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧱</div>
+                <h3>Kebutuhan Semen</h3>
+                <p>Menghitung estimasi kebutuhan semen beton.</p>
+                <button class="btn">Buka</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- KETERANGAN -->
+    <div class="info">
+        <h3>📌 Keterangan</h3>
+        <p>
+            Dalam perhitungan sederhana, <strong>1 m³ beton setara dengan
+            sekitar 8 sak semen (50 kg/sak)</strong>. Nilai ini merupakan
+            pendekatan umum dan dapat berbeda tergantung mutu beton
+            yang digunakan.
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 CivilCalc | Developed by Fauzan Abdullah
+    </footer>
 
 </body>
 </html>
+```
